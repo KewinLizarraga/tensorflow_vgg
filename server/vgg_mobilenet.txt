@@ -1,0 +1,17 @@
+# Importing Keras
+import keras
+
+# Importing TensorflowJS
+import tensorflowjs as tfjs
+
+# Model intialization for VGG16
+vgg16 = keras.applications.vgg16.VGG16()
+
+# Converting the Python Model to TensorflowJS for VGG16
+tfjs.converters.save_keras_model(vgg16, '/home/kewin/Project/Tensorflow/tensorflow_vgg/client/vgg/') 
+
+# Model intializacion for MobileNet
+mobilenet = keras.applications.mobilenet_v2.MobileNetV2()
+
+# Converting the Python Model to TensorflowJS for MobileNet
+tfjs.converters.save_keras_model(mobilenet, '/home/kewin/Project/Tensorflow/tensorflow_vgg/client/mobilenet/')
